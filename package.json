@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Aman-codde/meme-generator/issues"
   },
-  "homepage": "https://github.com/Aman-codde/meme-generator#readme"
+  "homepage": "https://github.com/Aman-codde/meme-generator#readme",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
 }
