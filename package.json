@@ -1,0 +1,19 @@
+{
+  "name": "meme-generator",
+  "version": "1.0.0",
+  "description": "meme generator app using mongodb, express, node and javascript",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aman-codde/meme-generator.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aman-codde/meme-generator/issues"
+  },
+  "homepage": "https://github.com/Aman-codde/meme-generator#readme"
+}
