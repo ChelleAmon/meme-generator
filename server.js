@@ -13,6 +13,10 @@ mongoose.connect(mongoUri).then(() => {
     console.log("Failed to connect to DB", err);
 });
 
+app.get('/', function(req,res) {
+    res.json({message: 'test'})
+});
+
 app.listen(port, () => {
   console.log(`listening to http://localhost:${port}`);
 });
