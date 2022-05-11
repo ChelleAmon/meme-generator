@@ -1,11 +1,13 @@
 import express from "express";
 import mongoose from "mongoose";
+import cors from 'cors';
 
 const port = 3000;
 const app = express();
 const mongoUri = "mongodb://localhost:27017/memeGenerator";
 
 app.use(express.json());
+app.use(cors());
 
 mongoose.connect(mongoUri).then(() => {
     console.log("connected to DB successfully");
