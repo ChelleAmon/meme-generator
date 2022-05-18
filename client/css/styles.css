@@ -4,6 +4,60 @@ html, body {
     height:100%;
 }
 
+/* Navbar J.M START */
+.navbar{
+    box-shadow: 0 2px 40px 0 rgba(212, 0, 166, 0.2);
+    background-color: rgba(212, 0, 166, 0.099);
+    width: 100%;
+    height: 100px;
+    font-size: 30px;
+    font-family: 'Chau Philomene One', sans-serif;
+    padding: 20px;
+    display: inline-block;
+}
+
+.navbar-brand{
+    /* margin-left: 800px; */
+    font-size: 50px;
+    font-family: 'Chau Philomene One', sans-serif;
+    display: inline-block;
+    text-shadow:1px 1px 10px rgb(197, 38, 255), 1px 1px 10px rgb(111, 0, 152);
+}
+
+#navbarNav{
+    color: #ddd;
+    background-color: rgba(212, 0, 166, 0.061);
+}
+
+/* Hover */
+.navbar-nav a:hover{
+    /* background-color: rgba(139, 0, 170, 0.931); */
+    text-shadow:1px 1px 10px rgb(197, 38, 255), 1px 1px 10px rgb(111, 0, 152);
+    border-radius: 10px;
+    color:white;
+}
+
+/* Clicked on */
+.navbar-nav a:active{
+    color:rgb(251, 25, 251);
+    border-radius: 10px;
+}
+
+.navbar-collapse{
+    box-shadow: 0 2px 40px 0 rgba(212, 0, 166, 0.2);
+}
+
+.nav-item :active{
+    font-size: 32px;
+    font-family: 'Chau Philomene One', sans-serif;
+    /* box-shadow: 120px 80px 40px 20px rgb(255, 0, 255); */
+    color: white;
+    text-decoration: none;
+    /* in order: x offset, y offset, blur size, spread size, color */
+    /* blur size and spread size are optional (they default to 0) */
+}
+/* Navbar J.M END */
+
 
 /* font-family: 'Chau Philomene One', sans-serif;
 font-family: 'Roboto', sans-serif; */
