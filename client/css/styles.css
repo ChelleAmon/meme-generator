@@ -1,0 +1,13 @@
+/* Footer Bar J.M Start */
+.footer-bar{
+    background-color: rgba(139, 0, 170, 0.931);
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+justify-content: center;
+    color: rgb(255, 255, 255);
+    font-family: 'Chau Philomene One' , sans-serif;
+
+}
+/* Footer Bar J.M END */
