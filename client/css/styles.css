@@ -175,3 +175,26 @@ justify-content: center;
 
 }
 /* Footer Bar J.M END */
+
+
+/* table G.S.A Start */
+.caption-table{
+    width: 100vh;
+    border: 1px solid black;
+    margin: 30 30 30 30;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+tr, th, td{
+    width: 20vh;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+/* table G.S.A End */
+
+
