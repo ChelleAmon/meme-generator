@@ -5,28 +5,46 @@ html, body {
 }
 
 /* Navbar J.M START */
+.logo-main{
+    padding-right: 30px;
+}
+/* Navbar START */
 .navbar{
     box-shadow: 0 2px 40px 0 rgba(212, 0, 166, 0.2);
     background-color: rgba(212, 0, 166, 0.099);
     width: 100%;
     height: 100px;
-    font-size: 30px;
+    font-size: 26px;
     font-family: 'Chau Philomene One', sans-serif;
     padding: 20px;
+    padding-top: 60px;
     display: inline-block;
+    flex-wrap: none;
 }
 
+
 .navbar-brand{
-    /* margin-left: 800px; */
-    font-size: 50px;
     font-family: 'Chau Philomene One', sans-serif;
     display: inline-block;
     text-shadow:1px 1px 10px rgb(197, 38, 255), 1px 1px 10px rgb(111, 0, 152);
+    
 }
 
+@media screen and (min-width: 601px) {
+    .navbar-brand {
+      font-size: 70px;
+    }
+  }
+@media screen and (max-width: 600px) {
+    .navbar-brand {
+      font-size: 50px;
+    }
+  }
+
 #navbarNav{
-    color: #ddd;
-    background-color: rgba(212, 0, 166, 0.061);
+    color: rgb(255, 255, 255);
+    /* background-color: rgba(161, 0, 126, 0.112); */
+    width: 30px;
 }
 
 /* Hover */
@@ -35,16 +53,19 @@ html, body {
     text-shadow:1px 1px 10px rgb(197, 38, 255), 1px 1px 10px rgb(111, 0, 152);
     border-radius: 10px;
     color:white;
+    /* font-size below with increase when hovering over page tabs */
+    font-size: 30px;
 }
 
 /* Clicked on */
 .navbar-nav a:active{
-    color:rgb(251, 25, 251);
+    color:rgb(0, 176, 62);
     border-radius: 10px;
 }
 
 .navbar-collapse{
-    box-shadow: 0 2px 40px 0 rgba(212, 0, 166, 0.2);
+    /* box-shadow: 0 2px 40px 0 rgba(212, 0, 166, 0.2); */
+    width: 30px;
 }
 
 .nav-item :active{
@@ -72,7 +93,7 @@ font-family: 'Roboto', sans-serif; */
     display: flex;
     justify-content: center;
     position: relative;
-   
+
 }
 
 /* Background Color overlay J.M START */
@@ -160,6 +181,14 @@ font-family: 'Roboto', sans-serif; */
         }
     }
 /* OTTER SPACE IMAGE J.M END */
+
+
+
+
+
+
+
+
 
 
 /* Footer Bar J.M Start */
