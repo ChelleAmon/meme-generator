@@ -16,6 +16,16 @@ mongoose.connect(mongoUri).then(() => {
     console.log("Failed to connect to DB", err);
 });
 
+// get all captions from database
+app.get('/captions', function(req, res) {
+    CaptionModel
+    .find()
+    .then(data => {
+        res.json(data)
+    })
+    .catch(err => res.status(500).json(err));
+});
+
 // create new caption and save it to database
 app.post('/create-caption', function(req, res) {
     const {topText, bottomText} = req.body;
