@@ -71,19 +71,35 @@
 
 
 <!-- Meme canvas display J.M START -->
-<div class="meme-image">
+<div class="container-lg meme-image">
   <!-- DD Start of HTML -->
   <!-- <canvas id="Canvas"></canvas> -->
-  <br>
-  <span>Upload Image</span>
-  <input type="file" name="" id="uploadMeme">
-  <span>Top Text</span>
-  <input type="text" placeholder="Top Text" id="topText">
-  <span>Bottom Text</span>
-  <input type="text" placeholder="Bottom Text" id="botText">
-  <br>
-  <button id='btn'>Make a Meme</button>
-  <canvas id="Canvas"></canvas>
+<div class="row">
+  <div class="col-md-6 col-sm-12">
+    <canvas id="Canvas"></canvas>
+  </div>
+  <div class=" col-md-6 col-sm-12 meme-image-buttons">
+    <div class="row">
+      <div class="col-12 upload-image-div">
+        <span>Upload Image</span>
+        <input type="file" name="" id="uploadMeme">
+      </div>
+      <div class="col-12">
+        <!-- <span>Top Text</span> -->
+        <input type="text" placeholder="Top Text" id="topText">    
+      </div>
+      <div class="col-12">
+        <!-- <span>Bottom Text</span> -->
+        <input type="text" placeholder="Bottom Text" id="botText">    
+      </div>
+    </div>
+  </div>
+  <div class="col-12">
+    <button id='btn'>Make a Meme</button>
+  </div>
+</div>
+
+
   <!-- DD End of HTML -->
 </div>
 <!-- Meme canvas display J.M END -->

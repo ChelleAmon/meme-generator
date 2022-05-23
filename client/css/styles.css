@@ -94,6 +94,11 @@ font-family: 'Roboto', sans-serif; */
     justify-content: center;
     position: relative;
 
+    /* G.A Start */
+    overflow: hidden;
+    z-index: -1;
+    /* G.A End */
+
 }
 
 /* Background Color overlay J.M START */
@@ -144,6 +149,25 @@ font-family: 'Roboto', sans-serif; */
         and end its trajectory across the screen. Each rule
         represents a path the element follows across the screen. */
     
+/* MEME IMAGE G.A Start */
+.meme-image {
+    position: absolute;
+    top: 35%;
+    left: 10%;
+}
+
+.meme-image canvas {
+    background:rgba(255, 255, 255, 0.2);
+    /* height: 400px;
+    width: 800px; */
+}
+
+.upload-image-div {
+    color: white;
+}
+
+
+/* MEME IMAGE G.A End */
     
     @keyframes fly {
     
