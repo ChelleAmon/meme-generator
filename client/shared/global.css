@@ -1,0 +1,102 @@
+
+
+/* J.M */
+html, body {
+    width: 100%;
+    height:100%;
+    box-sizing: border-box;
+}
+
+/* Navbar J.M START */
+.logo-main{
+    padding-right: 30px;
+}
+/* Navbar START */
+.navbar{
+    box-shadow: 0 2px 40px 0 rgba(212, 0, 166, 0.2);
+    background-color: rgba(212, 0, 166, 0.099);
+    width: 100%;
+    height: 100px;
+    font-size: 26px;
+    font-family: 'Chau Philomene One', sans-serif;
+    padding: 20px;
+    padding-top: 60px;
+    display: inline-block;
+    flex-wrap: none;
+}
+
+
+.navbar-brand{
+    font-family: 'Chau Philomene One', sans-serif;
+    display: inline-block;
+    text-shadow:1px 1px 10px rgb(197, 38, 255), 1px 1px 10px rgb(111, 0, 152);
+    
+}
+
+@media screen and (min-width: 601px) {
+    .navbar-brand {
+      font-size: 70px;
+    }
+  }
+@media screen and (max-width: 600px) {
+    .navbar-brand {
+      font-size: 50px;
+    }
+  }
+
+#navbarNav{
+    color: rgb(255, 255, 255);
+    /* background-color: rgba(161, 0, 126, 0.112); */
+    width: 30px;
+}
+
+/* Hover */
+.navbar-nav a:hover{
+    /* background-color: rgba(139, 0, 170, 0.931); */
+    text-shadow:1px 1px 10px rgb(197, 38, 255), 1px 1px 10px rgb(111, 0, 152);
+    border-radius: 10px;
+    color:white;
+    /* font-size below with increase when hovering over page tabs */
+    font-size: 30px;
+}
+
+/* Clicked on */
+.navbar-nav a:active{
+    color:rgb(0, 176, 62);
+    border-radius: 10px;
+}
+
+.navbar-collapse{
+    /* box-shadow: 0 2px 40px 0 rgba(212, 0, 166, 0.2); */
+    width: 30px;
+}
+
+.nav-item :active{
+    font-size: 32px;
+    font-family: 'Chau Philomene One', sans-serif;
+    /* box-shadow: 120px 80px 40px 20px rgb(255, 0, 255); */
+    color: white;
+    text-decoration: none;
+    /* in order: x offset, y offset, blur size, spread size, color */
+    /* blur size and spread size are optional (they default to 0) */
+}
+/* Navbar J.M END */
+
+
+/* font-family: 'Chau Philomene One', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+
+/* Footer Bar J.M Start */
+.footer-bar{
+    background-color: rgba(139, 0, 170, 0.931);
+    height: 50px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+justify-content: center;
+    color: rgb(255, 255, 255);
+    font-family: 'Chau Philomene One' , sans-serif;
+
+}
+/* Footer Bar J.M END */
