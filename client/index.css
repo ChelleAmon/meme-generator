@@ -1,0 +1,161 @@
+/* J.M */
+html, body {
+    width: 100%;
+    height:100%;
+}
+
+
+/* Background Image J.M */ 
+.bkgnd-container{
+    background: url(/client/img/purpgalaxy.jpg);
+    color: rgb(0, 0, 0);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    /* G.A Start */
+    overflow: hidden;
+    z-index: -1;
+    /* G.A End */
+
+}
+
+/* Background Color overlay J.M START */
+.color-overlay{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, #eedc52, #cc2968, #003571, rgb(0, 0, 1));
+    background-size: 400% 400%;
+    animation: gradient 20s ease infinite;
+    opacity: .2;
+    position: relative;
+}
+
+
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+/* Background color overlay J.M END */
+
+
+/* OTTER SPACE Image J.M START */
+.flier{
+    pointer-events: none;
+    opacity: .7;
+}
+
+.flier > * {
+    /* Adjust animation duration to change the element’s speed J.M */
+        animation: fly 50s linear infinite;
+        pointer-events: none !important;
+        top: 0;
+        left: 0;
+        transform: translateX(-120%) translateY(-120%) rotateZ(0);
+        position: fixed;
+        animation-delay: 1s;
+        z-index: 999999;
+    }
+    
+     /* Keyframe values control where the element will begin
+        and end its trajectory across the screen. Each rule
+        represents a path the element follows across the screen. */
+    
+/* MEME IMAGE G.A Start */
+.meme-image {
+    position: absolute;
+    top: 35%;
+    left: 10%;
+}
+
+.meme-image canvas {
+    background:rgba(255, 255, 255, 0.2);
+    /* height: 400px;
+    width: 800px; */
+}
+
+.upload-image-div {
+    color: white;
+}
+
+
+/* MEME IMAGE G.A End */
+    
+    @keyframes fly {
+    
+        98.001%, 0% {
+                    display: block;
+            transform: translateX(-200%) translateY(100vh) rotateZ(0deg)
+        }
+    
+        15% {
+            transform: translateX(100vw) translateY(-100%) rotateZ(180deg)
+        }
+    
+        15.001%, 18% {
+            transform: translateX(100vw) translateY(-30%) rotateZ(0deg)
+        }
+    
+        40% {
+            transform: translateX(-200%) translateY(3vh) rotateZ(-180deg)
+        }
+    
+        40.001%, 43% {
+            transform: translateX(-200%) translateY(-100%) rotateZ(-180deg)
+        }
+    
+        65% {
+            transform: translateX(100vw) translateY(50vh) rotateZ(0deg)
+        }
+    
+        65.001%, 68% {
+            transform: translateX(20vw) translateY(-200%) rotateZ(180deg)
+        }
+    
+        95% {
+            transform: translateX(10vw) translateY(100vh) rotateZ(0deg)
+        }
+    }
+/* OTTER SPACE IMAGE J.M END */
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* table G.S.A Start */
+.caption-table{
+    width: 100vh;
+    border: 1px solid black;
+    margin: 30 30 30 30;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+tr, th, td{
+    width: 20vh;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+/* table G.S.A End */
+
+
