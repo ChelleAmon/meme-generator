@@ -1,0 +1,56 @@
+/* table G.S.A Start */
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.main-container {
+    height: 90%;
+    width: 80%;
+    position: relative;
+    top: 15%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    /* z-index: -2 */
+}
+
+.main-container .title-container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    margin-bottom: 10px;
+}
+
+.main-container .main-table-container {
+    display: flex;
+    margin: 10px;
+}
+
+
+.caption-table{
+    width: 100vh;
+    border: 1px solid black;
+    margin: 30 30 30 30;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+tr, th{
+    width: 25vh;
+    height: 5vh;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid black;
+    font-size: 18px;
+}
+
+.td-caption {
+    text-align: center;
+}
+
+
+
+/* table G.S.A End */

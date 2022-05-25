@@ -100,7 +100,7 @@ font-family: 'Roboto', sans-serif; */
     position: relative;
 
     /* G.A Start */
-    overflow: hidden;
+    /* overflow: hidden;
     z-index: -1;
     /* G.A End */
 
