@@ -4,6 +4,11 @@ html, body {
     height:100%;
 }
 
+
+/* font-family: 'Chau Philomene One', sans-serif;
+font-family: 'Roboto', sans-serif; */
+
+
 /* Navbar J.M START */
 .logo-main{
     padding-right: 30px;
@@ -165,10 +170,123 @@ font-family: 'Roboto', sans-serif; */
 .upload-image-div {
     color: white;
 }
-
-
 /* MEME IMAGE G.A End */
     
+
+/* Generator Buttons J.M START */
+#btn{
+    background-color: rgb(227, 222, 232);
+    font-family: 'Roboto', sans-serif;
+    opacity: 1;
+    border: none;
+    border-radius: 6px;
+    height: 40px;
+    width: 180px;
+}
+
+#btn:hover {
+    box-shadow:1px 1px 10px rgb(100, 0, 137), 1px 1px 10px rgb(155, 0, 182);
+    color: rgb(255, 255, 255);
+    background-color: #d353f3f6;
+    -webkit-transform: translateY(-5px);
+	transform: translateY(-5px);
+}
+
+
+#uploadMeme{
+    background-color: rgb(227, 222, 232);
+    font-family: 'Roboto', sans-serif;
+    opacity: 1;
+    border: none;
+    border-radius: 8px;
+    height: 40px;
+    width: 180px;
+}
+
+#uploadMeme:hover{
+    box-shadow:1px 1px 10px rgb(100, 0, 137), 1px 1px 10px rgb(155, 0, 182);
+    color: rgb(255, 255, 255);
+    background-color: #d353f3f6;
+    -webkit-transform: translateY(-5px);
+	transform: translateY(-5px);
+}
+
+#topText{
+    background-color: rgb(227, 222, 232);
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    opacity: .7;
+    border: none;
+    border-radius: 8px;
+    height: 40px;
+    width: 180px;
+}
+
+#botText{
+    background-color: rgb(227, 222, 232);
+    font-family: 'Roboto' sans-serif;
+    font-size: 16px;
+    opacity: .7;
+    border: none;
+    border-radius: 8px;
+    height: 40px;
+    width: 180px;
+}
+
+.randombtn{
+    background-color: rgb(227, 222, 232);
+    font-family: 'Roboto' sans-serif;
+    font-size: 16px;
+    opacity: 1;
+    border: none;
+    border-radius: 8px;
+    height: 40px;
+    width: 180px;
+}
+.randombtn:hover{
+        box-shadow:1px 1px 10px rgb(100, 0, 137), 1px 1px 10px rgb(155, 0, 182);
+        color: rgb(255, 255, 255);
+        background-color: #d353f3f6;
+        -webkit-transform: translateY(-5px);
+        transform: translateY(-5px);
+}
+
+.savebtn{
+    background-color: rgb(227, 222, 232);
+    font-family: 'Roboto' sans-serif;
+    font-size: 16px;
+    opacity: 1;
+    border: none;
+    border-radius: 8px;
+    height: 40px;
+    width: 180px;
+}
+.savebtn:hover{
+    box-shadow:1px 1px 10px rgb(100, 0, 137), 1px 1px 10px rgb(155, 0, 182);
+    color: rgb(255, 255, 255);
+    background-color: #d353f3f6;
+    -webkit-transform: translateY(-5px);
+	transform: translateY(-5px);
+}
+
+
+
+  
+
+#Canvas{
+    width: 250px;
+    box-shadow:1px 1px 10px rgb(100, 0, 137), 1px 1px 10px rgb(155, 0, 182);
+  text-align: center;
+}
+
+
+/* Generator Buttons J.M END */
+
+
+
+
+
+
     @keyframes fly {
     
         98.001%, 0% {

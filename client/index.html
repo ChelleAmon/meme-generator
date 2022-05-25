@@ -71,32 +71,40 @@
 
 
 <!-- Meme canvas display J.M START -->
-<div class="container-lg meme-image">
+<div class="container-lg meme-image pt-5">
   <!-- DD Start of HTML -->
   <!-- <canvas id="Canvas"></canvas> -->
-<div class="row">
-  <div class="col-md-6 col-sm-12">
+<div class="row text-center">
+  <div class="col-md-6 col-sm-12 text-center">
     <canvas id="Canvas"></canvas>
+      <div class="text-center pt-4">
+        <button id='btn'>Make a Meme</button>
+      </div>
   </div>
-  <div class=" col-md-6 col-sm-12 meme-image-buttons">
+  <div class=" col-md-6 col-sm-12 meme-image-buttons text-center pt-4">
     <div class="row">
       <div class="col-12 upload-image-div">
-        <span>Upload Image</span>
+        <!-- <span>Upload Image</span> -->
         <input type="file" name="" id="uploadMeme">
       </div>
-      <div class="col-12">
+      <div class="col-12 pt-3">
         <!-- <span>Top Text</span> -->
-        <input type="text" placeholder="Top Text" id="topText">    
+        <input class="text-center" type="text" placeholder="Top Text..." id="topText">    
       </div>
-      <div class="col-12">
+      
+      <div class="col-12 pt-3">
         <!-- <span>Bottom Text</span> -->
-        <input type="text" placeholder="Bottom Text" id="botText">    
+        <input class="text-center" type="text" placeholder="Bottom Text..." id="botText">    
+      </div>
+      <div class="pt-3">
+        <button class="randombtn">Randomize Caption</button>
+      </div>
+      <div class="pt-3">
+        <button class=" savebtn button_slide slide_left">Save</button>
       </div>
     </div>
   </div>
-  <div class="col-12">
-    <button id='btn'>Make a Meme</button>
-  </div>
+  
 </div>
 
 
