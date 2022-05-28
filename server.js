@@ -42,6 +42,17 @@ app.post('/create-caption', function(req, res) {
     .catch(err => res.status(500).json(err))
 });
 
+
+//delete caption from database by finding the caption's _id and pass to url as a parameter
+app.delete('/delete-caption/:id', (req,res) => {
+    const id = req.params.id;
+
+    CaptionModel.findOneAndRemove({_id: id})
+    .then(data => res.json(data))
+    .catch(err => res.status(500).json(err))
+
+})
+
 app.get('/', function(req,res) {
     res.json({message: 'test'})
 });
