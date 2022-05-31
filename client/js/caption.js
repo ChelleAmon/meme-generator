@@ -1,4 +1,5 @@
 import { apiService as api} from "../api/api.service.js";
+import { removeCaption } from '../js/delete-caption.js';
 
 api.get('captions').then(captions => {
     captions.forEach(caption => {
@@ -14,6 +15,11 @@ api.get('captions').then(captions => {
     
         editButton.innerHTML = "Edit"
         deleteButton.innerHTML = "Delete"
+
+
+        deleteButton.addEventListener('click', () => {
+            removeCaption(caption._id)
+        })
     
     
         cellTopText.innerHTML =  `${caption.topText}`
@@ -31,7 +37,6 @@ api.get('captions').then(captions => {
         table.appendChild(rowCaption)
     
           
-    
     })
 
 })
