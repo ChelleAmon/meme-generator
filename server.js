@@ -39,7 +39,7 @@ app.put('/edit-caption/:id', (req,res) => {
         {$set: {topText: topText, bottomText: bottomText}},
         {new: true}
     )
-    .then (res => res.json())
+    .then (data => res.json(data))
     .catch(err => res.status(500).json(err))
 })
 
