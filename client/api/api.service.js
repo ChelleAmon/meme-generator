@@ -12,11 +12,15 @@ export const apiService = ({
         .then(() => window.location.reload())
     },
 
-    save: function(url){
+    save: function(url, data){
         return fetch(this.baseUrl + url, {
-            method: 'SAVE'
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+              },
+              body: JSON.stringify(data),
         })
         .then(res => res.json())
-        .then(() => window.location.reload())
+        // .then(() => window.location.reload())
     }
 });

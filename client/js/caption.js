@@ -44,13 +44,7 @@ api.get('captions').then(captions => {
 
 })
 
-const saveButton = document.getElementById('saving');
-let topTextInput = document.getElementById('topText');
-let botTextInput = document.getElementById('botText');
 
-saveButton.addEventListener('click', () => {
-    saveCaption(topTextInput, botTextInput)
-})
 
 
 
