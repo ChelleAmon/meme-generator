@@ -1,8 +1,10 @@
 import { apiService as api} from "../api/api.service.js";
+import { removeCaption } from '../js/delete-caption.js';
 
 api.get('captions').then(captions => {
     captions.forEach(caption => {
-        const table = document. querySelector('#caption-table');
+        // const table = document.querySelector('#caption-table');
+        const table = document.getElementById('caption-table')
         const rowCaption = document.createElement('tr')
         const cellTopText = document.createElement('td')
         const cellBottomText = document.createElement('td')
@@ -14,6 +16,12 @@ api.get('captions').then(captions => {
     
         editButton.innerHTML = "Edit"
         deleteButton.innerHTML = "Delete"
+
+
+        deleteButton.addEventListener('click', () => {
+            console.log('pressed')
+            removeCaption(caption._id)
+        })
     
     
         cellTopText.innerHTML =  `${caption.topText}`
@@ -28,10 +36,9 @@ api.get('captions').then(captions => {
         rowCaption.appendChild(cellBottomText)
         rowCaption.appendChild(cellButtons)
     
+        
         table.appendChild(rowCaption)
-    
           
-    
     })
 
 })
