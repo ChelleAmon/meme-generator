@@ -43,9 +43,6 @@
                       <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                   </li>
                   <li class="nav-item">
-                      <a class="nav-link" href="gallery.html">Gallery</a>
-                  </li>
-                  <li class="nav-item">
                       <a class="nav-link" href="./caption.html">Captions</a>
                   </li>
               
@@ -114,9 +111,85 @@
 <!-- Meme canvas display J.M END -->
 
  
+<!-- Info/How to use Pop-up box J.M START -->
 
-<footer class="container-fluid footer-bar">Meme Stack Team &copy; 2022
-</footer>
+
+
+<!-- Info/How to use Pop-up box J.M END -->
+<!-- Trigger/Open The Modal -->
+<div class=" info-container">
+  <button class="text-center" id="myBtn">Information</button>
+
+  <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+      <!-- Modal content -->
+      <div class="container-fluid modal-content modal-img img-fluid ">
+       
+        <span class="close">&times;</span>
+        <div class="">
+          <p class="head-text text-center text-white">Information</p>
+          <br>
+          <h3 style="color: rgb(98, 98, 98);">How to make a meme!</h3>
+          <br>
+          <ol>
+            <li><b>Upload an image</b>
+            </li>
+              <p>Click on the "Choose File" button to upload your image of choice and get Memeing! </p>
+            <li><b>Add some text.</b>
+              <p>Add your captions on the text bar beside the canvas. Add a top and/or bottom caption.</p>
+            </li>
+            <li><b>Generate Meme</b>
+            Click on the button below the canvas "Generate Meme"
+            </li>
+            <br>
+            <li><b>Save and Share</b>
+            To save, right click your mouse on the canvas and save in what ever format you'd like and start Sharing with your friends!
+            </li>
+          </ol>
+            
+        
+        </div>
+      </div>
+
+  </div>
+</div>
+
+<!-- Footer Bar J.M Start -->
+  <footer class="container-fluid footer-bar">Meme Stack Team &copy; 2022</footer>
+<!-- Footer Bar J.M END -->
+
+
+<!-- Info pop-up box Script J.M START -->
+<script>
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  
+  // Get the button that opens the modal
+  var btn = document.getElementById("myBtn");
+  
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+  
+  // When the user clicks the button, open the modal 
+  btn.onclick = function() {
+    modal.style.display = "block";
+  }
+  
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+  
+  // When the user clicks anywhere outside of the modal, close it
+  window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+  </script>
+<!-- Info pop-up box END -->
+
 
 
 
