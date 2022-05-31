@@ -100,7 +100,7 @@ font-family: 'Roboto', sans-serif; */
     position: relative;
 
     /* G.A Start */
-    overflow: hidden;
+    /* overflow: hidden;
     z-index: -1;
     /* G.A End */
 
@@ -140,7 +140,7 @@ font-family: 'Roboto', sans-serif; */
 
 .flier > * {
     /* Adjust animation duration to change the element’s speed J.M */
-        animation: fly 50s linear infinite;
+        animation: fly 26s linear infinite;
         pointer-events: none !important;
         top: 0;
         left: 0;
@@ -326,9 +326,111 @@ font-family: 'Roboto', sans-serif; */
 
 
 
+/* Info/How to use Pop-up box J.M START */
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 250px; /* Location of the box */
+    left: 0px;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.688); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fcf0ff;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 700px;
+    height: 400px;
+    box-shadow:1px 1px 20px rgb(100, 0, 137), 1px 0px 20px rgb(155, 0, 182);
+    overflow-x: scroll;
+  }
+
+  .modal-img{
+    background-image: url(/client/img/ufo\ and\ shaq\ 3.png);
+     background-size: 100%;
+     background-position:right;
+    overflow: scroll; 
+    background-repeat: no-repeat;
+  }
+
+  /* @media screen and (max-width: 670px) {
+    .modal-img {
+        position: static;
+        overflow: auto;
+        width: 100%;
+        height: 100%;
+        border-left: none;
+        clear: both;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    .modal-img {
+        width: 380px;
+    }
+} */
 
 
+  
+  /* The Close Button */
+  .close {
+    color: #00000092;
+    float: left;
+    font-size: 28px;
+    font-weight: bold;
+    text-shadow:1px 1px 10px rgb(197, 38, 255), 1px 1px 20px rgb(111, 0, 152);
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
 
+  .info-container {
+      background-color: #d0b5b500;
+      opacity: 1
+      ;
+      position:absolute;
+      bottom: 6%;
+      right:45%;
+  }
+
+#myBtn{
+    background-color: rgb(227, 222, 232);
+    font-family: 'Roboto' sans-serif;
+    font-size: 16px;
+    opacity: 1;
+    border: none;
+    border-radius: 8px;
+    height: 40px;
+    width: 180px;
+}
+
+#myBtn:hover{
+    box-shadow:1px 1px 10px rgb(100, 0, 137), 1px 1px 10px rgb(155, 0, 182);
+    color: rgb(255, 255, 255);
+    background-color: #d353f3f6;
+    -webkit-transform: translateY(-5px);
+	transform: translateY(-5px);
+}
+
+.head-text{
+    font-family: 'Chau Philomene One', sans-serif;
+    font-size: 42px;
+    text-shadow:1px 1px 10px rgb(197, 38, 255), 1px 1px 10px rgb(111, 0, 152);
+}
+/* Info/How to use Pop-up box J.M END */
 
 
 
@@ -343,13 +445,15 @@ font-family: 'Roboto', sans-serif; */
 justify-content: center;
     color: rgb(255, 255, 255);
     font-family: 'Chau Philomene One' , sans-serif;
+    position: fixed; 
+    bottom: 0;
 
 }
 /* Footer Bar J.M END */
 
 
 /* table G.S.A Start */
-.caption-table{
+/* .caption-table{
     width: 100vh;
     border: 1px solid black;
     margin: 30 30 30 30;
@@ -364,7 +468,7 @@ tr, th, td{
     justify-content: center;
     align-items: center;
     border: 1px solid black;
-}
+} */
 
 /* table G.S.A End */
 
