@@ -6,28 +6,25 @@ body {
 }
 
 .main-container {
-    height: 90%;
     width: 80%;
     position: relative;
-    top: 15%;
-    box-sizing: border-box;
-    margin: 0 auto;
-    /* z-index: -2 */
+    top: 15vh;
+    left: 20%;
+    overflow:hidden;
+    z-index: -2;
+    justify-content: center;
 }
 
 .main-container .title-container {
     display: flex;
-    justify-content: center;
     text-align: center;
-    vertical-align: middle;
     margin-bottom: 10px;
 }
 
 .main-container .main-table-container {
     display: flex;
-    margin: 10px;
+    
 }
-
 
 .caption-table{
     width: 100vh;
