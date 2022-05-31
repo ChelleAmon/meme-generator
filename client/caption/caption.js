@@ -1,5 +1,4 @@
 import { apiService as api} from "../api/api.service.js";
-import { saveCaption } from "./save-caption.js";
 import { removeCaption } from '../js/delete-caption.js';
 
 api.get('captions').then(captions => {
@@ -20,7 +19,6 @@ api.get('captions').then(captions => {
 
 
         deleteButton.addEventListener('click', () => {
-            console.log('pressed')
             removeCaption(caption._id)
         })
     

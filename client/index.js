@@ -1,4 +1,4 @@
-import { saveCaption } from "./save-caption.js";
+import { saveCaption } from "./js/save-caption.js";
 
 let memeFile = document.getElementById('uploadMeme')
 let topTextInput = document.getElementById('topText')
@@ -69,9 +69,6 @@ memeFile.addEventListener('change', () => {
             ctx.strokeText(botTextInput.value, w / 3, h - yOffSet);
         }
 
-
-
-
         button.addEventListener('click', loadImage);
 
     } else {
@@ -82,8 +79,7 @@ memeFile.addEventListener('change', () => {
 })
 
 const saveButton = document.getElementById('saving');
-// let topTextInput = document.getElementById('topText');
-// let botTextInput = document.getElementById('botText');
+
 
 saveButton.addEventListener('click', () => {
     saveCaption(topTextInput.value, botTextInput.value)
