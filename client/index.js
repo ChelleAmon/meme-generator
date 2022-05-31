@@ -1,4 +1,4 @@
-import { saveCaption } from "./save-caption.js";
+import { saveCaption } from "./js/save-caption.js";
 
 let memeFile = document.getElementById('uploadMeme')
 let topTextInput = document.getElementById('topText')
@@ -79,8 +79,7 @@ memeFile.addEventListener('change', () => {
 })
 
 const saveButton = document.getElementById('saving');
-// let topTextInput = document.getElementById('topText');
-// let botTextInput = document.getElementById('botText');
+
 
 saveButton.addEventListener('click', () => {
     saveCaption(topTextInput.value, botTextInput.value)
