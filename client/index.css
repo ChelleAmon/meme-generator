@@ -15,7 +15,7 @@ html, body {
     justify-content: center;
     position: relative;
     /* G.A Start */
-    overflow: hidden;
+    /* overflow: hidden;
     z-index: -1;
     /* G.A End */
 
@@ -55,7 +55,7 @@ html, body {
 
 .flier > * {
     /* Adjust animation duration to change the element’s speed J.M */
-        animation: fly 50s linear infinite;
+        animation: fly 26s linear infinite;
         pointer-events: none !important;
         top: 0;
         left: 0;
@@ -241,5 +241,39 @@ html, body {
 
 
 
+/* Info/How to use Pop-up box J.M START */
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 250px; /* Location of the box */
+    left: 0px;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.688); /* Black w/ opacity */
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fcf0ff;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 700px;
+    height: 400px;
+    box-shadow:1px 1px 20px rgb(100, 0, 137), 1px 0px 20px rgb(155, 0, 182);
+    overflow-x: scroll;
+  }
 
+  .modal-img{
+    background-image: url(/client/img/ufo\ and\ shaq\ 3.png);
+     background-size: 100%;
+     background-position:right;
+    overflow: scroll; 
+    background-repeat: no-repeat;
+  }
 
