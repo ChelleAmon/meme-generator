@@ -100,7 +100,7 @@ font-family: 'Roboto', sans-serif; */
     position: relative;
 
     /* G.A Start */
-    overflow: hidden;
+    /* overflow: hidden;
     z-index: -1;
     /* G.A End */
 
@@ -343,13 +343,15 @@ font-family: 'Roboto', sans-serif; */
 justify-content: center;
     color: rgb(255, 255, 255);
     font-family: 'Chau Philomene One' , sans-serif;
+    position: fixed; 
+    bottom: 0;
 
 }
 /* Footer Bar J.M END */
 
 
 /* table G.S.A Start */
-.caption-table{
+/* .caption-table{
     width: 100vh;
     border: 1px solid black;
     margin: 30 30 30 30;
@@ -364,7 +366,7 @@ tr, th, td{
     justify-content: center;
     align-items: center;
     border: 1px solid black;
-}
+} */
 
 /* table G.S.A End */
 
