@@ -1,3 +1,4 @@
+
 export class Caption{
     topText;
     bottomText;
