@@ -7,11 +7,12 @@ dotenv.config();
 
 const envConfig = {
     mongoUri: process.env.mongo_uri,
-    localMongoUri: "mongodb://localhost:27017/memeGenerator",
+    localMongoUri: process.env.local_mongo_uri,
 }
 
 const __dirname = path.resolve();
 const clientPath = path.join(__dirname, '/client')
+const filePath = path.join(clientPath, '/index.html')
 
 
 const app = express();
@@ -21,7 +22,7 @@ app.use(express.json());
 app.use(express.static(clientPath))
 
 
-export { app, envConfig };
+export { app, envConfig, filePath };
 
 
 
