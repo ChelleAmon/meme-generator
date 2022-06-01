@@ -7,7 +7,7 @@ html, body {
 
 /* Background Image J.M */ 
 .bkgnd-container{
-    background: url(/client/img/purpgalaxy.jpg);
+    background: url(/img/purpgalaxy.jpg);
     color: rgb(0, 0, 0);
     width: 100%;
     height: 100%;
@@ -270,7 +270,7 @@ html, body {
   }
 
   .modal-img{
-    background-image: url(/client/img/ufo\ and\ shaq\ 3.png);
+    background-image: url(/img/ufo\ and\ shaq\ 3.png);
      background-size: 100%;
      background-position:right;
     overflow: scroll; 
