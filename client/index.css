@@ -72,8 +72,8 @@ html, body {
 /* MEME IMAGE G.A Start */
 .meme-image {
     position: absolute;
-    top: 35%;
-    left: 10%;
+    top: 24vh;
+    left: 10vw;
 }
 
 .meme-image canvas {
