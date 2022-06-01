@@ -12,14 +12,28 @@ const maxWidth = 800;
 let imgValue;
 
 let image;
-memeFile.addEventListener('change', () => {
-    const imageDataURL = URL.createObjectURL(memeFile.files[0])
-    image = new Image();
-    image.src = imageDataURL;
 
-    if (canvas.getContext('2d')) {
-        const loadImage = () => {
-            const ctx = canvas.getContext('2d');
+memeFile.addEventListener('change', () => {
+        const imageDataURL = URL.createObjectURL(memeFile.files[0])
+        
+        image = new Image();
+        image.src = imageDataURL;
+
+        image.addEventListener("load", () => {
+            if(canvas.getContext('2d')) {
+                updateMemeCanvas(canvas, image, topTextInput.value, botTextInput.value)
+            } 
+
+            else {
+                alert('Your browser does not support this image format');
+            }
+
+        }, {once: true});
+
+});
+
+function updateMemeCanvas(canvas, image, topText, botText) {
+    const ctx = canvas.getContext('2d');
             ctx.beginPath();
 
             // establish image size
@@ -60,23 +74,14 @@ memeFile.addEventListener('change', () => {
 
             // adding the top meme text
             ctx.textBaseline = 'Top';
-            ctx.fillText(topTextInput.value, w / 3, yOffSet);
-            ctx.strokeText(topTextInput.value, w / 3, yOffSet);
+            ctx.fillText(topText, w / 3, yOffSet);
+            ctx.strokeText(topText, w / 3, yOffSet);
 
             // adding the bottom text
             ctx.textBaseline = 'Bottom';
-            ctx.fillText(botTextInput.value, w / 3, h - yOffSet);
-            ctx.strokeText(botTextInput.value, w / 3, h - yOffSet);
-        }
-
-        button.addEventListener('click', loadImage);
-
-    } else {
-        alert('Your browser does not support this image format');
-    }
-
-
-})
+            ctx.fillText(botText, w / 3, h - yOffSet);
+            ctx.strokeText(botText, w / 3, h - yOffSet);
+}
 
 const saveButton = document.getElementById('saving');
 
