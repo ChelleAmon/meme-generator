@@ -13,6 +13,14 @@ let imgValue;
 
 let image;
 
+topTextInput.addEventListener("change", () => {
+    updateMemeCanvas(canvas, image, topTextInput.value, botTextInput.value);
+  });
+  
+botTextInput.addEventListener("change", () => {
+    updateMemeCanvas(canvas, image, topTextInput.value, botTextInput.value);
+  });
+
 memeFile.addEventListener('change', () => {
         const imageDataURL = URL.createObjectURL(memeFile.files[0])
         
