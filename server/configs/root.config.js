@@ -1,21 +1,28 @@
 import express from 'express';
 import cors from 'cors';
 import dotenv from 'dotenv';
+import path from 'path';
 
 dotenv.config();
 
-const app = express();
-app.use(cors())
-app.use(express.json());
-
-
 const envConfig = {
     mongoUri: process.env.mongo_uri,
-    localMongoUri: "mongodb://localhost:27017/memeGenerator",
+    localMongoUri: process.env.local_mongo_uri,
 }
 
+const __dirname = path.resolve();
+const clientPath = path.join(__dirname, '/client')
+const filePath = path.join(clientPath, '/index.html')
 
-export { app, envConfig};
+
+const app = express();
+
+app.use(cors())
+app.use(express.json());
+app.use(express.static(clientPath))
+
+
+export { app, envConfig, filePath };
 
 
 

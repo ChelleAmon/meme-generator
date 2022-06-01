@@ -7,6 +7,11 @@ const app = rootConfig.app;
 
 app.use('/', apiRouter)
 
+app.all('*', (req,res) => {
+  const filePath = rootConfig.filePath;
+  res.sendFile(filePath);
+})
+
 app.listen(port, () => {
   console.log(`listening to http://localhost:${port}`);
 });
