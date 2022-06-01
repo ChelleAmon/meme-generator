@@ -47,3 +47,27 @@ captionRouter.delete('/delete-caption/:id', (req,res) => {
     .catch(err => res.status(500).json(err))
 
 })
+
+
+captionRouter.get('/random-caption', (req,res) => {
+    CaptionModel.aggregate([
+        {$sample: { 
+            size: 1 // grabs how many documents we will get 
+        }}
+    ])
+    .then(data => res.json(data))
+    .catch(err => res.status(500).json(err))
+})
+
+
+//Another way to get random document(caption) from db
+
+// captionRouter.get('/random-caption', (req,res) => {
+//     CaptionModel.count().exec(function(err, count){
+//         let random = Math.floor(Math.random() * count);
+
+//         CaptionModel.findOne().skip(random).exec()
+//         .then(data => res.json(data))
+//         .catch(err => res.status(500).json(err))
+//     })
+// })
