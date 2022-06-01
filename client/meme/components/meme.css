@@ -7,7 +7,7 @@ html, body {
 
 /* Background Image J.M */ 
 .bkgnd-container{
-    background: url(./img/purpgalaxy.jpg);
+    background: url(../../img/purpgalaxy.jpg);
     color: rgb(0, 0, 0);
     width: 100%;
     height: 100%;
@@ -15,7 +15,7 @@ html, body {
     justify-content: center;
     position: relative;
     /* G.A Start */
-    /* overflow: hidden;
+    overflow: hidden;
     z-index: -1;
     /* G.A End */
 
@@ -55,7 +55,7 @@ html, body {
 
 .flier > * {
     /* Adjust animation duration to change the element’s speed J.M */
-        animation: fly 26s linear infinite;
+        animation: fly 50s linear infinite;
         pointer-events: none !important;
         top: 0;
         left: 0;
@@ -85,8 +85,46 @@ html, body {
 .upload-image-div {
     color: white;
 }
+
+
 /* MEME IMAGE G.A End */
     
+    @keyframes fly {
+    
+        98.001%, 0% {
+                    display: block;
+            transform: translateX(-200%) translateY(100vh) rotateZ(0deg)
+        }
+    
+        15% {
+            transform: translateX(100vw) translateY(-100%) rotateZ(180deg)
+        }
+    
+        15.001%, 18% {
+            transform: translateX(100vw) translateY(-30%) rotateZ(0deg)
+        }
+    
+        40% {
+            transform: translateX(-200%) translateY(3vh) rotateZ(-180deg)
+        }
+    
+        40.001%, 43% {
+            transform: translateX(-200%) translateY(-100%) rotateZ(-180deg)
+        }
+    
+        65% {
+            transform: translateX(100vw) translateY(50vh) rotateZ(0deg)
+        }
+    
+        65.001%, 68% {
+            transform: translateX(20vw) translateY(-200%) rotateZ(180deg)
+        }
+    
+        95% {
+            transform: translateX(10vw) translateY(100vh) rotateZ(0deg)
+        }
+    }
+/* OTTER SPACE IMAGE J.M END */
 
 /* Generator Buttons J.M START */
 #btn{
@@ -197,11 +235,6 @@ html, body {
 
 /* Generator Buttons J.M END */
 
-
-
-
-
-
     @keyframes fly {
     
         98.001%, 0% {
@@ -270,7 +303,7 @@ html, body {
   }
 
   .modal-img{
-    background-image: url(./img/ufo\ and\ shaq\ 3.png);
+    background-image: url(../../img/ufo\ and\ shaq\ 3.png);
      background-size: 100%;
      background-position:right;
     overflow: scroll; 
@@ -292,7 +325,6 @@ html, body {
         width: 380px;
     }
 } */
-
 
 
   /* The Close Button */
@@ -345,4 +377,7 @@ html, body {
     text-shadow:1px 1px 10px rgb(197, 38, 255), 1px 1px 10px rgb(111, 0, 152);
 }
 /* Info/How to use Pop-up box J.M END */
+
+
+
 
