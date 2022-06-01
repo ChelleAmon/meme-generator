@@ -1,3 +1,6 @@
+import {saveCaption} from './save-caption.js'
+
+
 function makeAMeme() {
     let memeFile = document.getElementById('uploadMeme')
     let topTextInput = document.getElementById('topText')
@@ -73,6 +76,13 @@ function makeAMeme() {
         } else {
             alert('Your browser does not support this image format');
         }
+    })
+
+    const saveButton = document.getElementById('saving');
+
+
+    saveButton.addEventListener('click', () => {
+        saveCaption(topTextInput.value, botTextInput.value)
     })
 }
 

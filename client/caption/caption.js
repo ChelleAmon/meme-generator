@@ -1,5 +1,5 @@
 import { apiService as api} from "../api/api.service.js";
-import { removeCaption } from '../js/delete-caption.js';
+import { removeCaption } from './delete-caption.js';
 
 api.get('captions').then(captions => {
     captions.forEach(caption => {
