@@ -1,4 +1,4 @@
-import {saveCaption} from './save-caption.js'
+import saveCaption from "../../caption/services/save-caption.js"
 
 
 function makeAMeme() {
