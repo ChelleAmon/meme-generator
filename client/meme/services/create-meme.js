@@ -83,6 +83,7 @@ function makeAMeme() {
 
     saveButton.addEventListener('click', () => {
         saveCaption(topTextInput.value, botTextInput.value)
+        alert('You have saved ' + topTextInput.value + ' & ' + botTextInput.value + ' to the database');
     })
 }
 
