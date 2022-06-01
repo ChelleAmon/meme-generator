@@ -34,6 +34,8 @@ function displayAllCaptions(cb1, cb2) {
                 if (editButton.innerHTML == 'Edit') {
                     cellTopText.setAttribute('contenteditable', 'true');
                     cellBottomText.setAttribute('contenteditable', 'true');
+                    cellTopText.style.backgroundColor = 'yellow'
+                    cellBottomText.style.backgroundColor = 'yellow'
                     editButton.innerHTML = 'Save'
                     editButton.style.background = 'Yellow'
                     console.log('Edit');
@@ -43,6 +45,8 @@ function displayAllCaptions(cb1, cb2) {
                     console.log('I Saved');
                     cellTopText.setAttribute('contenteditable', 'false');
                     cellBottomText.setAttribute('contenteditable', 'false');
+                    cellTopText.style.backgroundColor = 'white'
+                    cellBottomText.style.backgroundColor = 'white'
                     editButton.innerHTML = 'Edit'
                     editButton.style.background = 'Green'
 
