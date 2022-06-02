@@ -1,4 +1,6 @@
 import { apiService as api  } from '../../api/api.service.js';
+import { updateMemeCanvas } from '../../meme/services/create-meme.js';
+
 
 if (sessionStorage.getItem("topText")){
    updateCaptionFromStorage()
@@ -12,9 +14,9 @@ function randomize(){
 
       saveCaptionToStorage(caption)
       updateCaptionFromStorage()
-
+      updateMemeCanvas()
    })
-   .catch(() => console.error("There is an error"))
+   .catch((err) => console.log("There is an error", err))
 }
 
 
