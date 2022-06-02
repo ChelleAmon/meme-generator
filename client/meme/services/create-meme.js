@@ -1,7 +1,5 @@
 import saveCaption from "../../caption/services/save-caption.js"
 
-
-function makeAMeme() {
     let memeFile = document.getElementById('uploadMeme')
     let topTextInput = document.getElementById('topText')
     let botTextInput = document.getElementById('botText')
@@ -14,23 +12,25 @@ function makeAMeme() {
     let imgValue;
 
     let image;
+    let imageDataURL;
+
 
     topTextInput.addEventListener("change", () => {
-        updateMemeCanvas(canvas, image, topTextInput.value, botTextInput.value);
+        updateMemeCanvas();
       });
       
     botTextInput.addEventListener("change", () => {
-        updateMemeCanvas(canvas, image, topTextInput.value, botTextInput.value);
+        updateMemeCanvas();
       });
 
     memeFile.addEventListener('change', () => {
-        const imageDataURL = URL.createObjectURL(memeFile.files[0])
+        imageDataURL = URL.createObjectURL(memeFile.files[0])
         image = new Image();
         image.src = imageDataURL;
 
         image.addEventListener("load", () => {
             if(canvas.getContext('2d')) {
-                updateMemeCanvas(canvas, image, topTextInput.value, botTextInput.value)
+                updateMemeCanvas()
             } 
             else {
                 alert('Your browser does not support this image format');
@@ -39,7 +39,10 @@ function makeAMeme() {
         }, {once: true});
     })
 
-    function updateMemeCanvas(canvas, image, topText, botText) {
+    export function updateMemeCanvas() {
+
+        if(!image) return;
+        
             const ctx = canvas.getContext('2d');
             ctx.beginPath();
 
@@ -105,9 +108,5 @@ function makeAMeme() {
 
     }
 })
-}
 
 
-
-
-export default makeAMeme;
