@@ -17,11 +17,11 @@ function makeAMeme() {
 
     topTextInput.addEventListener("change", () => {
         updateMemeCanvas(canvas, image, topTextInput.value, botTextInput.value);
-      });
-      
+    });
+
     botTextInput.addEventListener("change", () => {
         updateMemeCanvas(canvas, image, topTextInput.value, botTextInput.value);
-      });
+    });
 
     memeFile.addEventListener('change', () => {
         const imageDataURL = URL.createObjectURL(memeFile.files[0])
@@ -29,82 +29,108 @@ function makeAMeme() {
         image.src = imageDataURL;
 
         image.addEventListener("load", () => {
-            if(canvas.getContext('2d')) {
+            if (canvas.getContext('2d')) {
                 updateMemeCanvas(canvas, image, topTextInput.value, botTextInput.value)
-            } 
+            }
             else {
                 alert('Your browser does not support this image format');
             }
 
-        }, {once: true});
+        }, { once: true });
     })
 
     function updateMemeCanvas(canvas, image, topText, botText) {
-            const ctx = canvas.getContext('2d');
-            ctx.beginPath();
 
-            // establish image size
-            const width = image.width;
-            const height = image.height;
-            const yOffSet = maxHeight / 7;
-            let w;
-            let h;
-
-            // Resize image within max bounds
-            if (width > maxWidth) {
-                imgValue = width / maxWidth;
-                w = width/imgValue;
-                h = height/imgValue;
+        // function to wrap text on captions
+        const wrapText = (ctx, text, x, y, maxWidth, lineHeight) => {
+            const words = text.split(' ');
+            let line = '';
+            for (const [index, w] of words.entries()) {
+                const testLine = line + w + ' ';
+                const metrics = ctx.measureText(testLine);
+                const testWidth = metrics.width;
+                if (testWidth > maxWidth && index > 0) {
+                    ctx.fillText(line, x, y);
+                    line = w + ' ';
+                    y += lineHeight;
+                } else {
+                    line = testLine;
+                }
             }
-            else if (height > maxHeight){
-                imgValue = height / maxHeight;
-                w = width/imgValue;
-                h = height/imgValue;
-            }
-            else{
-                w = width;
-                h = height;
-            }
+            ctx.fillText(line, x, y);
+        }
+
+        lineHeight = 24;
+        const x = (canvas.width - maxWidth) / 2;
+        const y = 70;
+        const ctx = canvas.getContext('2d');
+        ctx.beginPath();
+
+        // establish image size
+        const width = image.width;
+        const height = image.height;
+        const yOffSet = maxHeight / 7;
+        let w;
+        let h;
+
+        // Resize image within max bounds
+        if (width > maxWidth) {
+            imgValue = width / maxWidth;
+            w = width / imgValue;
+            h = height / imgValue;
+        }
+        else if (height > maxHeight) {
+            imgValue = height / maxHeight;
+            w = width / imgValue;
+            h = height / imgValue;
+        }
+        else {
+            w = width;
+            h = height;
+        }
 
 
-            // load the canvas background
-            canvas.width = w;
-            canvas.height = h;
+        // load the canvas background
+        canvas.width = w;
+        canvas.height = h;
 
-            console.log(canvas.width);
-            ctx.drawImage(image, 0, 0, w, h);
+        console.log(canvas.width);
+        ctx.drawImage(image, 0, 0, w, h);
 
-            // styling the meme text
-            ctx.font = 'Bold 40px Sans-serif';
-            ctx.fillStyle = 'white';
-            ctx.strokeStyle = 'black';
+        // styling the meme text
+        ctx.font = 'Bold 40px Sans-serif';
+        ctx.fillStyle = 'white';
+        ctx.strokeStyle = 'black';
 
-            // adding the top meme text
-            ctx.textBaseline = 'Top';
-            ctx.textAlign = 'center';
-            ctx.fillText(topText, w/2, yOffSet);
-            ctx.strokeText(topText, w/2, yOffSet);
+        //test function
+        wrapText(ctx, text, x, y, maxWidth, lineHeight);
 
-            // adding the bottom text
-            ctx.textBaseline = 'Bottom';
-            ctx.fillText(botText, w/2, h - yOffSet);
-            ctx.strokeText(botText, w/2, h - yOffSet);
-        
+        // adding the top meme text
+        ctx.textBaseline = 'Top';
+        ctx.textAlign = 'center';
+        ctx.fillText(topText, w / 2, yOffSet);
+        ctx.strokeText(topText, w / 2, yOffSet);
+
+        // adding the bottom text
+        ctx.textBaseline = 'Bottom';
+        ctx.fillText(botText, w / 2, h - yOffSet);
+        ctx.strokeText(botText, w / 2, h - yOffSet);
+
     }
 
     const saveButton = document.getElementById('saving');
 
 
     saveButton.addEventListener('click', () => {
-        if (topTextInput.value == '' && botTextInput.value == ''){
-        alert('Both text fields cannot be empty, please fill out at least one form.');
-    }
+        if (topTextInput.value == '' && botTextInput.value == '') {
+            alert('Both text fields cannot be empty, please fill out at least one form.');
+        }
         else {
-        saveCaption(topTextInput.value, botTextInput.value)
-        alert('You have saved ' + topTextInput.value + ' & ' + botTextInput.value + ' to the database');
+            saveCaption(topTextInput.value, botTextInput.value)
+            alert('You have saved ' + topTextInput.value + ' & ' + botTextInput.value + ' to the database');
 
-    }
-})
+        }
+    })
 }
 
 
