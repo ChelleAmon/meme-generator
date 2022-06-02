@@ -48,8 +48,8 @@ function displayAllCaptions(cb1, cb2) {
                     console.log('I Saved');
                     cellTopText.setAttribute('contenteditable', 'false');
                     cellBottomText.setAttribute('contenteditable', 'false');
-                    cellTopText.style.backgroundColor = 'white'
-                    cellBottomText.style.backgroundColor = 'white'
+                    cellTopText.style.backgroundColor = '#fddaff'
+                    cellBottomText.style.backgroundColor = '#fddaff'
                     editButton.innerHTML = 'Edit'
                     editButton.style.background = 'Green'
 
