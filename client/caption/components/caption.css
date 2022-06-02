@@ -1,0 +1,163 @@
+/* table G.S.A Start */
+/* body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: fit-content;
+} */
+
+.main-container{
+    top: 0px;
+    left: 0px;
+    background-color: #fddaff;
+    overflow: hidden;
+    border-radius: 10px;
+    
+}
+
+
+/* .main-container {
+    width: 80%;
+    
+    top: 1px;
+    bottom: 300px;
+    left: 20%;
+    overflow:hidden;
+    justify-content: center;
+    padding-bottom: 60px;
+    
+}
+
+.main-container .title-container {
+    display: flex;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.main-container .main-table-container {
+    display: flex;
+    
+}
+
+.caption-table{
+    width: 100vh;
+    border: 1px solid black;
+    margin: 30 30 30 30;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+
+tr, th{
+    width: 25vh;
+    height: 5vh;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid black;
+    font-size: 18px;
+}
+
+.td-caption {
+    text-align: center;
+} */
+
+
+
+/* table G.S.A End */
+
+tr, th{
+    width: 25vh;
+    height: 5vh;
+    padding: 0px;
+    text-align: center;
+    border: 1px solid black;
+    font-size: 18px;
+}
+
+/* Background Image J.M */ 
+.bkgnd-container{
+    background: url(../../img/purpgalaxy.jpg);
+    background-repeat: repeat;
+    color: rgb(0, 0, 0);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    /* G.A Start */
+    overflow: hidden;
+    z-index: -1;
+    /* G.A End */
+
+}
+
+/* Background Color overlay J.M START */
+.color-overlay{
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(-45deg, #eedc52, #cc2968, #003571, rgb(0, 0, 1));
+    background-size: 400% 400%;
+    animation: gradient 20s ease infinite;
+    opacity: .2;
+    position: relative;
+}
+
+
+    @keyframes gradient {
+        0% {
+            background-position: 0% 50%;
+        }
+        50% {
+            background-position: 100% 50%;
+        }
+        100% {
+            background-position: 0% 50%;
+        }
+    }
+/* Background color overlay J.M END */
+
+
+
+/* Info/How to use Pop-up box J.M START */
+/* The Modal (background) */
+.modal {
+    display:flex; /* Hidden by default */
+    position: absolute; 
+    z-index: 0; /* Sit on top */
+    /* padding-top: 50px; 
+    padding-bottom: 80px; */
+    left: 0;
+    top: 150px;
+    bottom: 80px;
+    margin: auto;
+    right: 0;
+    width: 55%;
+    height: 80vh;
+    border-radius: 20px;
+
+     
+  
+  }
+  
+
+/* Modal Content */
+.modal-content {
+    background-color: #fcf0ff;
+    padding-top: 0px;
+    border: 1px solid #888;
+    width: auto;
+    height: 900px;
+
+    padding-left: 0;
+     padding-right: 0;
+     padding-bottom: 0;
+    border-radius: 20px;
+     
+  }
+
+  /* .info-container{
+      width: 100vw;
+      height: 100vh;
+  } */
+
+  

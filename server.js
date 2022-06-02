@@ -1,21 +1,16 @@
-import express from "express";
-import mongoose from "mongoose";
+import * as rootConfig from "./server/configs/root.config.js";
+import * as dbConfig from './server/configs/db.config.js';
+import { apiRouter } from './server/routes/api.routes.js';
 
 const port = 3000;
-const app = express();
-const mongoUri = "mongodb://localhost:27017/memeGenerator";
+const app = rootConfig.app;
 
-app.use(express.json());
+app.use('/', apiRouter)
 
-mongoose.connect(mongoUri).then(() => {
-    console.log("connected to DB successfully");
-}).catch((err) => {
-    console.log("Failed to connect to DB", err);
-});
-
-app.get('/', function(req,res) {
-    res.json({message: 'test'})
-});
+app.all('*', (req,res) => {
+  const filePath = rootConfig.filePath;
+  res.sendFile(filePath);
+})
 
 app.listen(port, () => {
   console.log(`listening to http://localhost:${port}`);
