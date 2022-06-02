@@ -84,13 +84,14 @@ import saveCaption from "../../caption/services/save-caption.js"
 
             // adding the top meme text
             ctx.textBaseline = 'Top';
-            ctx.fillText(topTextInput.value, w / 3, yOffSet);
-            ctx.strokeText(topTextInput.value, w / 3, yOffSet);
+            ctx.textAlign = 'center';
+            ctx.fillText(topText, w/2, yOffSet);
+            ctx.strokeText(topText, w/2, yOffSet);
 
             // adding the bottom text
             ctx.textBaseline = 'Bottom';
-            ctx.fillText(botTextInput.value, w / 3, h - yOffSet);
-            ctx.strokeText(botTextInput.value, w / 3, h - yOffSet);
+            ctx.fillText(botText, w/2, h - yOffSet);
+            ctx.strokeText(botText, w/2, h - yOffSet);
         
     }
 
