@@ -34,15 +34,15 @@ function makeAMeme() {
                 // Resize image within max bounds
                 if (width > maxWidth) {
                     imgValue = width / maxWidth;
-                    w = width/imgValue;
-                    h = height/imgValue;
+                    w = width / imgValue;
+                    h = height / imgValue;
                 }
-                else if (height > maxHeight){
+                else if (height > maxHeight) {
                     imgValue = height / maxHeight;
-                    w = width/imgValue;
-                    h = height/imgValue;
+                    w = width / imgValue;
+                    h = height / imgValue;
                 }
-                else{
+                else {
                     w = width;
                     h = height;
                 }
@@ -82,9 +82,15 @@ function makeAMeme() {
 
 
     saveButton.addEventListener('click', () => {
+        if (topTextInput.value == '' && botTextInput.value == ''){
+        alert('Both text fields cannot be empty, please fill out at least one form.');
+    }
+        else {
         saveCaption(topTextInput.value, botTextInput.value)
         alert('You have saved ' + topTextInput.value + ' & ' + botTextInput.value + ' to the database');
-    })
+
+    }
+})
 }
 
 
