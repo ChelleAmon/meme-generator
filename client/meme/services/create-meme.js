@@ -1,7 +1,5 @@
 import saveCaption from "../../caption/services/save-caption.js"
 
-
-function makeAMeme() {
     let memeFile = document.getElementById('uploadMeme')
     let topTextInput = document.getElementById('topText')
     let botTextInput = document.getElementById('botText')
@@ -14,24 +12,26 @@ function makeAMeme() {
     let imgValue;
 
     let image;
+    let imageDataURL;
+
 
     topTextInput.addEventListener("change", () => {
-        updateMemeCanvas(canvas, image, topTextInput.value, botTextInput.value);
-    });
-
+        updateMemeCanvas();
+      });
+      
     botTextInput.addEventListener("change", () => {
-        updateMemeCanvas(canvas, image, topTextInput.value, botTextInput.value);
-    });
+        updateMemeCanvas();
+      });
 
     memeFile.addEventListener('change', () => {
-        const imageDataURL = URL.createObjectURL(memeFile.files[0])
+        imageDataURL = URL.createObjectURL(memeFile.files[0])
         image = new Image();
         image.src = imageDataURL;
 
         image.addEventListener("load", () => {
-            if (canvas.getContext('2d')) {
-                updateMemeCanvas(canvas, image, topTextInput.value, botTextInput.value)
-            }
+            if(canvas.getContext('2d')) {
+                updateMemeCanvas()
+            } 
             else {
                 alert('Your browser does not support this image format');
             }
@@ -39,7 +39,12 @@ function makeAMeme() {
         }, { once: true });
     })
 
-    function updateMemeCanvas(canvas, image, topText, botText) {
+    export function updateMemeCanvas() {
+
+        if(!image) return;
+        
+            const ctx = canvas.getContext('2d');
+            ctx.beginPath();
 
         // function to wrap text on captions
         const wrapText = (ctx, text, x, y, maxWidth, lineHeight) => {
@@ -51,6 +56,7 @@ function makeAMeme() {
                 const testWidth = metrics.width;
                 if (testWidth > maxWidth && index > 0) {
                     ctx.fillText(line, x, y);
+                    ctx.strokeText(line, x, y);
                     line = w + ' ';
                     y += lineHeight;
                 } else {
@@ -58,13 +64,8 @@ function makeAMeme() {
                 }
             }
             ctx.fillText(line, x, y);
+            ctx.strokeText(line, x, y);
         }
-
-        lineHeight = 24;
-        const x = (canvas.width - maxWidth) / 2;
-        const y = 70;
-        const ctx = canvas.getContext('2d');
-        ctx.beginPath();
 
         // establish image size
         const width = image.width;
@@ -97,24 +98,30 @@ function makeAMeme() {
         console.log(canvas.width);
         ctx.drawImage(image, 0, 0, w, h);
 
+        const lineHeight = 35;
+        const x = w / 2;
+        const y = 80;
+
         // styling the meme text
         ctx.font = 'Bold 40px Sans-serif';
         ctx.fillStyle = 'white';
         ctx.strokeStyle = 'black';
 
         //test function
-        wrapText(ctx, text, x, y, maxWidth, lineHeight);
+        
 
         // adding the top meme text
         ctx.textBaseline = 'Top';
         ctx.textAlign = 'center';
-        ctx.fillText(topText, w / 2, yOffSet);
-        ctx.strokeText(topText, w / 2, yOffSet);
+        // ctx.fillText(topText.value, w / 2, yOffSet);
+        // ctx.strokeText(topText.value, w / 2, yOffSet);
+        wrapText(ctx, topText.value, x, y, maxWidth, lineHeight);
 
         // adding the bottom text
         ctx.textBaseline = 'Bottom';
-        ctx.fillText(botText, w / 2, h - yOffSet);
-        ctx.strokeText(botText, w / 2, h - yOffSet);
+        // ctx.fillText(botText.value, w / 2, h - yOffSet);
+        // ctx.strokeText(botText.value, w / 2, h - yOffSet);
+        wrapText(ctx, botText.value, x, h - yOffSet, maxWidth, lineHeight);
 
     }
 
@@ -129,11 +136,7 @@ function makeAMeme() {
             saveCaption(topTextInput.value, botTextInput.value)
             alert('You have saved ' + topTextInput.value + ' & ' + botTextInput.value + ' to the database');
 
-        }
-    })
-}
+    }
+})
 
 
-
-
-export default makeAMeme;
