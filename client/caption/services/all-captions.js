@@ -17,6 +17,9 @@ function displayAllCaptions(cb1, cb2) {
             editButton.innerHTML = "Edit"
             deleteButton.innerHTML = "Delete"
 
+            editButton.className = "edit-btn"
+            deleteButton.className = "delete-btn"
+
             deleteButton.addEventListener('click', () => {
 
                 //callback
