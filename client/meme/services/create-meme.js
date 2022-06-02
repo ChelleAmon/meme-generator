@@ -95,8 +95,15 @@ function makeAMeme() {
 
 
     saveButton.addEventListener('click', () => {
+        if (topTextInput.value == '' && botTextInput.value == ''){
+        alert('Both text fields cannot be empty, please fill out at least one form.');
+    }
+        else {
         saveCaption(topTextInput.value, botTextInput.value)
-    })
+        alert('You have saved ' + topTextInput.value + ' & ' + botTextInput.value + ' to the database');
+
+    }
+})
 }
 
 
