@@ -107,9 +107,6 @@ import saveCaption from "../../caption/services/save-caption.js"
         ctx.fillStyle = 'white';
         ctx.strokeStyle = 'black';
 
-        //test function
-        
-
         // adding the top meme text
         ctx.textBaseline = 'Top';
         ctx.textAlign = 'center';
