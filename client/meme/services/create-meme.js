@@ -36,7 +36,7 @@ import saveCaption from "../../caption/services/save-caption.js"
                 alert('Your browser does not support this image format');
             }
 
-        }, {once: true});
+        }, { once: true });
     })
 
     export function updateMemeCanvas() {
@@ -46,65 +46,92 @@ import saveCaption from "../../caption/services/save-caption.js"
             const ctx = canvas.getContext('2d');
             ctx.beginPath();
 
-            // establish image size
-            const width = image.width;
-            const height = image.height;
-            const yOffSet = maxHeight / 7;
-            let w;
-            let h;
-
-            // Resize image within max bounds
-            if (width > maxWidth) {
-                imgValue = width / maxWidth;
-                w = width/imgValue;
-                h = height/imgValue;
+        // function to wrap text on captions
+        const wrapText = (ctx, text, x, y, maxWidth, lineHeight) => {
+            const words = text.split(' ');
+            let line = '';
+            for (const [index, w] of words.entries()) {
+                const testLine = line + w + ' ';
+                const metrics = ctx.measureText(testLine);
+                const testWidth = metrics.width;
+                if (testWidth > maxWidth && index > 0) {
+                    ctx.fillText(line, x, y);
+                    ctx.strokeText(line, x, y);
+                    line = w + ' ';
+                    y += lineHeight;
+                } else {
+                    line = testLine;
+                }
             }
-            else if (height > maxHeight){
-                imgValue = height / maxHeight;
-                w = width/imgValue;
-                h = height/imgValue;
-            }
-            else{
-                w = width;
-                h = height;
-            }
+            ctx.fillText(line, x, y);
+            ctx.strokeText(line, x, y);
+        }
+
+        // establish image size
+        const width = image.width;
+        const height = image.height;
+        const yOffSet = maxHeight / 7;
+        let w;
+        let h;
+
+        // Resize image within max bounds
+        if (width > maxWidth) {
+            imgValue = width / maxWidth;
+            w = width / imgValue;
+            h = height / imgValue;
+        }
+        else if (height > maxHeight) {
+            imgValue = height / maxHeight;
+            w = width / imgValue;
+            h = height / imgValue;
+        }
+        else {
+            w = width;
+            h = height;
+        }
 
 
-            // load the canvas background
-            canvas.width = w;
-            canvas.height = h;
+        // load the canvas background
+        canvas.width = w;
+        canvas.height = h;
 
-            console.log(canvas.width);
-            ctx.drawImage(image, 0, 0, w, h);
+        console.log(canvas.width);
+        ctx.drawImage(image, 0, 0, w, h);
 
-            // styling the meme text
-            ctx.font = 'Bold 40px Sans-serif';
-            ctx.fillStyle = 'white';
-            ctx.strokeStyle = 'black';
+        const lineHeight = 35;
+        const x = w / 2;
+        const y = 80;
 
-            // adding the top meme text
-            ctx.textBaseline = 'Top';
-            ctx.textAlign = 'center';
-            ctx.fillText(topText, w/2, yOffSet);
-            ctx.strokeText(topText, w/2, yOffSet);
+        // styling the meme text
+        ctx.font = 'Bold 40px Sans-serif';
+        ctx.fillStyle = 'white';
+        ctx.strokeStyle = 'black';
 
-            // adding the bottom text
-            ctx.textBaseline = 'Bottom';
-            ctx.fillText(botText, w/2, h - yOffSet);
-            ctx.strokeText(botText, w/2, h - yOffSet);
-        
+        // adding the top meme text
+        ctx.textBaseline = 'Top';
+        ctx.textAlign = 'center';
+        // ctx.fillText(topText.value, w / 2, yOffSet);
+        // ctx.strokeText(topText.value, w / 2, yOffSet);
+        wrapText(ctx, topText.value, x, y, maxWidth, lineHeight);
+
+        // adding the bottom text
+        ctx.textBaseline = 'Bottom';
+        // ctx.fillText(botText.value, w / 2, h - yOffSet);
+        // ctx.strokeText(botText.value, w / 2, h - yOffSet);
+        wrapText(ctx, botText.value, x, h - yOffSet, maxWidth, lineHeight);
+
     }
 
     const saveButton = document.getElementById('saving');
 
 
     saveButton.addEventListener('click', () => {
-        if (topTextInput.value == '' && botTextInput.value == ''){
-        alert('Both text fields cannot be empty, please fill out at least one form.');
-    }
+        if (topTextInput.value == '' && botTextInput.value == '') {
+            alert('Both text fields cannot be empty, please fill out at least one form.');
+        }
         else {
-        saveCaption(topTextInput.value, botTextInput.value)
-        alert('You have saved ' + topTextInput.value + ' & ' + botTextInput.value + ' to the database');
+            saveCaption(topTextInput.value, botTextInput.value)
+            alert('You have saved ' + topTextInput.value + ' & ' + botTextInput.value + ' to the database');
 
     }
 })
