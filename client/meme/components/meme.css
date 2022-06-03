@@ -1,12 +1,13 @@
 /* J.M */
-html, body {
+html,
+body {
     width: 100%;
-    height:100%;
+    height: 100%;
 }
 
 
-/* Background Image J.M */ 
-.bkgnd-container{
+/* Background Image J.M */
+.bkgnd-container {
     background: url(../../img/purpgalaxy.jpg);
     color: rgb(0, 0, 0);
     width: 100%;
@@ -22,7 +23,7 @@ html, body {
 }
 
 /* Background Color overlay J.M START */
-.color-overlay{
+.color-overlay {
     width: 100%;
     height: 100%;
     background: linear-gradient(-45deg, #eedc52, #cc2968, #003571, rgb(0, 0, 1));
@@ -33,42 +34,45 @@ html, body {
 }
 
 
-    @keyframes gradient {
-        0% {
-            background-position: 0% 50%;
-        }
-        50% {
-            background-position: 100% 50%;
-        }
-        100% {
-            background-position: 0% 50%;
-        }
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
     }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
 /* Background color overlay J.M END */
 
 
 /* OTTER SPACE Image J.M START */
-.flier{
+.flier {
     pointer-events: none;
     opacity: .7;
 }
 
-.flier > * {
+.flier>* {
     /* Adjust animation duration to change the element’s speed J.M */
-        animation: fly 50s linear infinite;
-        pointer-events: none !important;
-        top: 0;
-        left: 0;
-        transform: translateX(-120%) translateY(-120%) rotateZ(0);
-        position: fixed;
-        animation-delay: 1s;
-        z-index: 999999;
-    }
-    
-     /* Keyframe values control where the element will begin
+    animation: fly 50s linear infinite;
+    pointer-events: none !important;
+    top: 0;
+    left: 0;
+    transform: translateX(-120%) translateY(-120%) rotateZ(0);
+    position: fixed;
+    animation-delay: 1s;
+    z-index: 999999;
+}
+
+/* Keyframe values control where the element will begin
         and end its trajectory across the screen. Each rule
         represents a path the element follows across the screen. */
-    
+
 /* MEME IMAGE G.A Start */
 .meme-image {
     position: absolute;
@@ -77,7 +81,7 @@ html, body {
 }
 
 .meme-image canvas {
-    background:rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.2);
     /* height: 400px;
     width: 800px; */
 }
@@ -88,46 +92,51 @@ html, body {
 
 
 /* MEME IMAGE G.A End */
-    
-    @keyframes fly {
-    
-        98.001%, 0% {
-                    display: block;
-            transform: translateX(-200%) translateY(100vh) rotateZ(0deg)
-        }
-    
-        15% {
-            transform: translateX(100vw) translateY(-100%) rotateZ(180deg)
-        }
-    
-        15.001%, 18% {
-            transform: translateX(100vw) translateY(-30%) rotateZ(0deg)
-        }
-    
-        40% {
-            transform: translateX(-200%) translateY(3vh) rotateZ(-180deg)
-        }
-    
-        40.001%, 43% {
-            transform: translateX(-200%) translateY(-100%) rotateZ(-180deg)
-        }
-    
-        65% {
-            transform: translateX(100vw) translateY(50vh) rotateZ(0deg)
-        }
-    
-        65.001%, 68% {
-            transform: translateX(20vw) translateY(-200%) rotateZ(180deg)
-        }
-    
-        95% {
-            transform: translateX(10vw) translateY(100vh) rotateZ(0deg)
-        }
+
+@keyframes fly {
+
+    98.001%,
+    0% {
+        display: block;
+        transform: translateX(-200%) translateY(100vh) rotateZ(0deg)
     }
+
+    15% {
+        transform: translateX(100vw) translateY(-100%) rotateZ(180deg)
+    }
+
+    15.001%,
+    18% {
+        transform: translateX(100vw) translateY(-30%) rotateZ(0deg)
+    }
+
+    40% {
+        transform: translateX(-200%) translateY(3vh) rotateZ(-180deg)
+    }
+
+    40.001%,
+    43% {
+        transform: translateX(-200%) translateY(-100%) rotateZ(-180deg)
+    }
+
+    65% {
+        transform: translateX(100vw) translateY(50vh) rotateZ(0deg)
+    }
+
+    65.001%,
+    68% {
+        transform: translateX(20vw) translateY(-200%) rotateZ(180deg)
+    }
+
+    95% {
+        transform: translateX(10vw) translateY(100vh) rotateZ(0deg)
+    }
+}
+
 /* OTTER SPACE IMAGE J.M END */
 
 /* Generator Buttons J.M START */
-#btn{
+#btn {
     background-color: rgb(227, 222, 232);
     font-family: 'Roboto', sans-serif;
     opacity: 1;
@@ -138,15 +147,15 @@ html, body {
 }
 
 #btn:hover {
-    box-shadow:1px 1px 10px rgb(100, 0, 137), 1px 1px 10px rgb(155, 0, 182);
+    box-shadow: 1px 1px 10px rgb(100, 0, 137), 1px 1px 10px rgb(155, 0, 182);
     color: rgb(255, 255, 255);
     background-color: #d353f3f6;
     -webkit-transform: translateY(-5px);
-	transform: translateY(-5px);
+    transform: translateY(-5px);
 }
 
 
-#uploadMeme{
+#uploadMeme {
     background-color: rgb(227, 222, 232);
     font-family: 'Roboto', sans-serif;
     opacity: 1;
@@ -156,15 +165,15 @@ html, body {
     width: 180px;
 }
 
-#uploadMeme:hover{
-    box-shadow:1px 1px 10px rgb(100, 0, 137), 1px 1px 10px rgb(155, 0, 182);
+#uploadMeme:hover {
+    box-shadow: 1px 1px 10px rgb(100, 0, 137), 1px 1px 10px rgb(155, 0, 182);
     color: rgb(255, 255, 255);
     background-color: #d353f3f6;
     -webkit-transform: translateY(-5px);
-	transform: translateY(-5px);
+    transform: translateY(-5px);
 }
 
-#topText{
+#topText {
     background-color: rgb(227, 222, 232);
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
@@ -175,7 +184,7 @@ html, body {
     width: 180px;
 }
 
-#botText{
+#botText {
     background-color: rgb(227, 222, 232);
     font-family: 'Roboto' sans-serif;
     font-size: 16px;
@@ -186,7 +195,7 @@ html, body {
     width: 180px;
 }
 
-.randombtn{
+.randombtn {
     background-color: rgb(227, 222, 232);
     font-family: 'Roboto' sans-serif;
     font-size: 16px;
@@ -195,81 +204,89 @@ html, body {
     border-radius: 8px;
     height: 40px;
     width: 180px;
-}
-.randombtn:hover{
-        box-shadow:1px 1px 10px rgb(100, 0, 137), 1px 1px 10px rgb(155, 0, 182);
-        color: rgb(255, 255, 255);
-        background-color: #d353f3f6;
-        -webkit-transform: translateY(-5px);
-        transform: translateY(-5px);
 }
 
-.savebtn{
-    background-color: rgb(227, 222, 232);
-    font-family: 'Roboto' sans-serif;
-    font-size: 16px;
-    opacity: 1;
-    border: none;
-    border-radius: 8px;
-    height: 40px;
-    width: 180px;
-}
-.savebtn:hover{
-    box-shadow:1px 1px 10px rgb(100, 0, 137), 1px 1px 10px rgb(155, 0, 182);
+.randombtn:hover {
+    box-shadow: 1px 1px 10px rgb(100, 0, 137), 1px 1px 10px rgb(155, 0, 182);
     color: rgb(255, 255, 255);
     background-color: #d353f3f6;
     -webkit-transform: translateY(-5px);
-	transform: translateY(-5px);
+    transform: translateY(-5px);
+}
+
+.savebtn {
+    background-color: rgb(227, 222, 232);
+    font-family: 'Roboto' sans-serif;
+    font-size: 16px;
+    opacity: 1;
+    border: none;
+    border-radius: 8px;
+    height: 40px;
+    width: 180px;
+}
+
+.savebtn:hover {
+    box-shadow: 1px 1px 10px rgb(100, 0, 137), 1px 1px 10px rgb(155, 0, 182);
+    color: rgb(255, 255, 255);
+    background-color: #d353f3f6;
+    -webkit-transform: translateY(-5px);
+    transform: translateY(-5px);
 }
 
 
 
-  
 
-#Canvas{
-    width: 250px;
-    box-shadow:1px 1px 10px rgb(100, 0, 137), 1px 1px 10px rgb(155, 0, 182);
-  text-align: center;
+
+#Canvas {
+    max-width: 60vw;
+    max-height: 60vh;
+    box-shadow: 1px 1px 10px rgb(100, 0, 137), 1px 1px 10px rgb(155, 0, 182);
+    text-align: center;
 }
 
 
 /* Generator Buttons J.M END */
 
-    @keyframes fly {
-    
-        98.001%, 0% {
-                    display: block;
-            transform: translateX(-200%) translateY(100vh) rotateZ(0deg)
-        }
-    
-        15% {
-            transform: translateX(100vw) translateY(-100%) rotateZ(180deg)
-        }
-    
-        15.001%, 18% {
-            transform: translateX(100vw) translateY(-30%) rotateZ(0deg)
-        }
-    
-        40% {
-            transform: translateX(-200%) translateY(3vh) rotateZ(-180deg)
-        }
-    
-        40.001%, 43% {
-            transform: translateX(-200%) translateY(-100%) rotateZ(-180deg)
-        }
-    
-        65% {
-            transform: translateX(100vw) translateY(50vh) rotateZ(0deg)
-        }
-    
-        65.001%, 68% {
-            transform: translateX(20vw) translateY(-200%) rotateZ(180deg)
-        }
-    
-        95% {
-            transform: translateX(10vw) translateY(100vh) rotateZ(0deg)
-        }
+@keyframes fly {
+
+    98.001%,
+    0% {
+        display: block;
+        transform: translateX(-200%) translateY(100vh) rotateZ(0deg)
     }
+
+    15% {
+        transform: translateX(100vw) translateY(-100%) rotateZ(180deg)
+    }
+
+    15.001%,
+    18% {
+        transform: translateX(100vw) translateY(-30%) rotateZ(0deg)
+    }
+
+    40% {
+        transform: translateX(-200%) translateY(3vh) rotateZ(-180deg)
+    }
+
+    40.001%,
+    43% {
+        transform: translateX(-200%) translateY(-100%) rotateZ(-180deg)
+    }
+
+    65% {
+        transform: translateX(100vw) translateY(50vh) rotateZ(0deg)
+    }
+
+    65.001%,
+    68% {
+        transform: translateX(20vw) translateY(-200%) rotateZ(180deg)
+    }
+
+    95% {
+        transform: translateX(10vw) translateY(100vh) rotateZ(0deg)
+    }
+}
+
 /* OTTER SPACE IMAGE J.M END */
 
 
@@ -277,10 +294,14 @@ html, body {
 /* Info/How to use Pop-up box J.M START */
 
 .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 250px; /* Location of the box */
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 250px;
+    /* Location of the box */
     left: 0px;
     top: 0;
     width: 100%; /* Full width */
@@ -299,21 +320,21 @@ html, body {
     border: 1px solid #888;
     width: 700px;
     height: 400px;
-    box-shadow:1px 1px 20px rgb(100, 0, 137), 1px 0px 20px rgb(155, 0, 182);
+    box-shadow: 1px 1px 20px rgb(100, 0, 137), 1px 0px 20px rgb(155, 0, 182);
     overflow-x: scroll;
     border-radius: 15px;
   
   }
 
-  .modal-img{
+.modal-img {
     background-image: url(../../img/ufo\ and\ shaq\ 3.png);
-     background-size: 100%;
-     background-position:right;
-    overflow: scroll; 
+    background-size: 100%;
+    background-position: right;
+    overflow: scroll;
     background-repeat: no-repeat;
-  }
+}
 
-  /* @media screen and (max-width: 670px) {
+/* @media screen and (max-width: 670px) {
     .modal-img {
         position: static;
         overflow: auto;
@@ -330,17 +351,17 @@ html, body {
 } */
 
 
-  /* The Close Button */
-  .close {
+/* The Close Button */
+.close {
     color: #00000092;
     float: left;
     font-size: 28px;
     font-weight: bold;
-    text-shadow:1px 1px 10px rgb(197, 38, 255), 1px 1px 20px rgb(111, 0, 152);
-  }
+    text-shadow: 1px 1px 10px rgb(197, 38, 255), 1px 1px 20px rgb(111, 0, 152);
+}
 
-  .close:hover,
-  .close:focus {
+.close:hover,
+.close:focus {
     color: #000;
     text-decoration: none;
     cursor: pointer;
@@ -356,7 +377,7 @@ html, body {
       padding-bottom: 50px;
   }
 
-#myBtn{
+#myBtn {
     background-color: rgb(227, 222, 232);
     font-family: 'Roboto' sans-serif;
     font-size: 16px;
@@ -367,21 +388,18 @@ html, body {
     width: 180px;
 }
 
-#myBtn:hover{
-    box-shadow:1px 1px 10px rgb(100, 0, 137), 1px 1px 10px rgb(155, 0, 182);
+#myBtn:hover {
+    box-shadow: 1px 1px 10px rgb(100, 0, 137), 1px 1px 10px rgb(155, 0, 182);
     color: rgb(255, 255, 255);
     background-color: #d353f3f6;
     -webkit-transform: translateY(-5px);
-	transform: translateY(-5px);
+    transform: translateY(-5px);
 }
 
-.head-text{
+.head-text {
     font-family: 'Chau Philomene One', sans-serif;
     font-size: 42px;
-    text-shadow:1px 1px 10px rgb(197, 38, 255), 1px 1px 10px rgb(111, 0, 152);
+    text-shadow: 1px 1px 10px rgb(197, 38, 255), 1px 1px 10px rgb(111, 0, 152);
 }
+
 /* Info/How to use Pop-up box J.M END */
-
-
-
-
