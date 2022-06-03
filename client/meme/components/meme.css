@@ -309,7 +309,6 @@ body {
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0, 0, 0, 0.688); /* Black w/ opacity */
-    
   }
   
 /* Modal Content */
@@ -323,8 +322,14 @@ body {
     box-shadow: 1px 1px 20px rgb(100, 0, 137), 1px 0px 20px rgb(155, 0, 182);
     overflow-x: scroll;
     border-radius: 15px;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   
   }
+
+  .modal-content::-webkit-scrollbar{
+    display: none;
+}
 
 .modal-img {
     background-image: url(../../img/ufo\ and\ shaq\ 3.png);
