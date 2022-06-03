@@ -109,4 +109,27 @@ import saveCaption from "../../caption/services/save-caption.js"
     }
 })
 
+// download meme
+button.addEventListener('click', function() {
+    // for Internet Explorer
+    if(window.navigator.msSaveBlob) {
+        window.navigator.msSaveBlob(canvas.msToBlob(), "canvas-image.png")
+    }
+    else {
+            const a =  document.createElement("a");
+            document.body.appendChild(a);
+            a.href = canvas.toDataURL();
+
+            const imageName = prompt("Enter Image Name", "canvas-image");
+            if(imageName != null) {
+                a.download = `${imageName}.png`;
+            }
+            else {
+                a.download = "canvas-image.png";
+            }
+
+            a.click();
+            document.body.removeChild(); 
+    }
+})
 
