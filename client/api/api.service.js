@@ -1,5 +1,6 @@
 export const apiService = ({
-    baseUrl: 'http://localhost:3000/api/',
+    baseURL: !environment.production ? 'http://localhost:3000/api/' : '/api/',
+
     get: function(url) {
         return fetch(this.baseUrl + url).then(res => res.json());
     },
