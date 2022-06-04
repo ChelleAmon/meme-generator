@@ -1,13 +1,6 @@
 import { apiService as api  } from '../../api/api.service.js';
 import { updateMemeCanvas } from '../../meme/services/create-meme.js';
 
-
-if (sessionStorage.getItem("topText")){
-   updateCaptionFromStorage()
-}else {
-   randomize()
-}
-
 function randomize(){
    api.get('random-caption')
    .then((caption) => {
