@@ -6,9 +6,9 @@ function displayAllCaptions(cb1, cb2) {
             const table = document.getElementById('caption-table')
             const rowCaption = document.createElement('tr')
             const cellTopText = document.createElement('td')
-            cellTopText.setAttribute('contenteditable', 'false')
+            // cellTopText.setAttribute('contenteditable', 'false')
             const cellBottomText = document.createElement('td')
-            cellBottomText.setAttribute('contenteditable', 'false')
+            // cellBottomText.setAttribute('contenteditable', 'false')
             const cellButtons = document.createElement('td')
 
             const editButton = document.createElement('button')
@@ -16,6 +16,9 @@ function displayAllCaptions(cb1, cb2) {
 
             editButton.innerHTML = "Edit"
             deleteButton.innerHTML = "Delete"
+
+            editButton.className = "edit-btn"
+            deleteButton.className = "delete-btn"
 
             deleteButton.addEventListener('click', () => {
 
@@ -45,8 +48,8 @@ function displayAllCaptions(cb1, cb2) {
                     console.log('I Saved');
                     cellTopText.setAttribute('contenteditable', 'false');
                     cellBottomText.setAttribute('contenteditable', 'false');
-                    cellTopText.style.backgroundColor = 'white'
-                    cellBottomText.style.backgroundColor = 'white'
+                    cellTopText.style.backgroundColor = '#fddaff'
+                    cellBottomText.style.backgroundColor = '#fddaff'
                     editButton.innerHTML = 'Edit'
                     editButton.style.background = 'Green'
 
@@ -55,7 +58,6 @@ function displayAllCaptions(cb1, cb2) {
                 console.log('Done');
 
                 
-
             })
 
             rowCaption.appendChild(cellTopText)
