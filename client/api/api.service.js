@@ -1,3 +1,6 @@
+import { environment } from '../environments/environment.js';
+
+
 export const apiService = ({
     baseURL: !environment.production ? 'http://localhost:3000/api/' : '/api/',
 
