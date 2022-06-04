@@ -6,9 +6,9 @@ function displayAllCaptions(cb1, cb2) {
             const table = document.getElementById('caption-table')
             const rowCaption = document.createElement('tr')
             const cellTopText = document.createElement('td')
-            cellTopText.setAttribute('contenteditable', 'false')
+            // cellTopText.setAttribute('contenteditable', 'false')
             const cellBottomText = document.createElement('td')
-            cellBottomText.setAttribute('contenteditable', 'false')
+            // cellBottomText.setAttribute('contenteditable', 'false')
             const cellButtons = document.createElement('td')
 
             const editButton = document.createElement('button')
@@ -58,7 +58,6 @@ function displayAllCaptions(cb1, cb2) {
                 console.log('Done');
 
                 
-
             })
 
             rowCaption.appendChild(cellTopText)
