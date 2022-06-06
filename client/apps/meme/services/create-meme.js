@@ -1,4 +1,4 @@
-import saveCaption from "../../caption/services/save-caption.js"
+import saveCaption from "./save-caption.js"
 
     let memeFile = document.getElementById('uploadMeme')
     let topTextInput = document.getElementById('topText')

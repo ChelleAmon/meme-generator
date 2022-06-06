@@ -1,5 +1,3 @@
-
-function displayModal(){
 //  Info pop-up box Script J.M START 
 
   // Get the modal
@@ -27,8 +25,7 @@ function displayModal(){
       modal.style.display = "none";
     }
   }
-}
+
 
 //  Info pop-up box Script J.M END
 
-export default displayModal;

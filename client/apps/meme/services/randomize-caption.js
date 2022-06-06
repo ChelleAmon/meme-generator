@@ -1,5 +1,5 @@
-import { apiService as api  } from '../../api/api.service.js';
-import { updateMemeCanvas } from '../../meme/services/create-meme.js';
+import { apiService as api  } from '../../services/api.service.js';
+import { updateMemeCanvas } from './create-meme.js';
 
 function randomize(){
    api.get('random-caption')
