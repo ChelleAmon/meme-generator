@@ -1,4 +1,4 @@
-import { apiService as api } from "../../api/api.service.js";
+import { apiService as api } from "../../services/api.service.js";
 
 const saveCaption = (tText,bText) => {
     api.save(`create-caption`,{topText: tText, bottomText: bText}

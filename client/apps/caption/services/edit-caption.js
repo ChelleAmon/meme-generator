@@ -1,4 +1,4 @@
-import { apiService as api } from "../../api/api.service.js";
+import { apiService as api } from "../../services/api.service.js";
 
 const editCaption = (id, tText, bText) => {
     api.edit(`edit-caption/${id}`, { topText: tText, bottomText: bText }
