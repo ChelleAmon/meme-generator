@@ -52,7 +52,7 @@ th {
 
 /* Background Image J.M */ 
 .bkgnd-container{
-    background: url(../../img/purpgalaxy.jpg);
+    background: url(../../../img/purpgalaxy.jpg);
     background-repeat: repeat;
     color: rgb(0, 0, 0);
     width: 100%;

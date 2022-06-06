@@ -1,6 +1,6 @@
 //import functions from the other js files
-import displayAllCaptions from "../caption/services/all-captions.js";
-import { removeCaption } from '../caption/services/delete-caption.js';
+import displayAllCaptions from "./services/all-captions.js";
+import { removeCaption } from './services/delete-caption.js';
 import { editCaption } from "./services/edit-caption.js";
 
 

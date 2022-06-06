@@ -1,4 +1,4 @@
-import { apiService as api } from "../../api/api.service.js";
+import { apiService as api } from "../../services/api.service.js";
 
 function displayAllCaptions(cb1, cb2) {
     api.get('captions').then(captions => {
