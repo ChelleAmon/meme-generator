@@ -1,6 +1,3 @@
-import { environment } from '../../environments/environment.js';
-
-
 export const apiService = ({
     baseUrl: 'http://localhost:3000/api/',
 
