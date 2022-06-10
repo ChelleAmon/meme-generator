@@ -1,5 +1,5 @@
 export const apiService = ({
-    baseUrl: 'http://localhost:3000/api/',
+    baseUrl: location.origin.includes('localhost') ? 'http://localhost:3000/api/' : '' + '/api/',
 
     get: function(url) {
         return fetch(this.baseUrl + url).then(res => res.json());
